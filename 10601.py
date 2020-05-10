@@ -4,6 +4,13 @@ import numpy as np
 import pandas as pd
 data=np.array([["yes","no","no"],["yes","no","no"],["yes","no","yes"]])
 st.title("10-601, Introduction to ML, CMU, Audit by Akshaj, May 2020")
+def sqloss(y,yhat):
+    return (y-yhat)**2
+def binloss(y,yhat):
+    if y==yhat:
+        return 0
+    else:
+        return 1
 def algo1(data,nf):
     '''data is the data and nf is the number of features, this algo finds the feature which will give the maximum accuracy if independently left'''
     cyes=len(data[data[:,0]=="yes"])
