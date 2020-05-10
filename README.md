@@ -4,3 +4,4 @@
  1) Install Streamlit and python on your pc
  2) Clone this library
  3) Streamlit run 10601.py
+ 4) (Optional) Check out the python file for info on the algos from scratch!
