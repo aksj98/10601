@@ -66,9 +66,10 @@ if opt=="Decision Trees":
     st.write("I coded the algorithm to detect the feature while will give us the maximum info gain(using the algorithm one in the given resource)")
     st.write("Maximum info gain in with column")
     st.write(algo1(data,3))
+    #add sin curve with approximation using n calls
     aabcd,bacd=spinaprox()
     numpoints=st.slider('Number of points to approx with')
     aprox(n=numpoints,a=aabcd,b=bacd)
     st.pyplot()
-    #add sin curve with approximated 100 times
     #memorizer algorithm
+    
