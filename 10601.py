@@ -2,8 +2,22 @@
 import streamlit as st
 import numpy as np
 import pandas as pd
+import matplotlib.pyplot as plt
 data=np.array([["yes","no","no"],["yes","no","no"],["yes","no","yes"]])
 st.title("10-601, Introduction to ML, CMU, Audit by Akshaj, May 2020")
+def spinaprox():
+    a=np.arange(0,2*3.14,2*3.14/100)
+    b=np.sin(a)
+    plt.plot(a,b)
+    plt.plot(a,[0]*100)
+    plt.title("sine wave approximation")
+    return a,b
+def aprox(n,a,b):
+    c=np.random.randint(0,100,size=n)
+    c.sort()
+    aproxidataa=a[c]
+    aproxidatab=b[c]
+    plt.plot(aproxidataa,aproxidatab)
 def sqloss(y,yhat):
     return (y-yhat)**2
 def binloss(y,yhat):
@@ -52,3 +66,9 @@ if opt=="Decision Trees":
     st.write("I coded the algorithm to detect the feature while will give us the maximum info gain(using the algorithm one in the given resource)")
     st.write("Maximum info gain in with column")
     st.write(algo1(data,3))
+    aabcd,bacd=spinaprox()
+    numpoints=st.slider('Number of points to approx with')
+    aprox(n=numpoints,a=aabcd,b=bacd)
+    st.pyplot()
+    #add sin curve with approximated 100 times
+    #memorizer algorithm
