@@ -6,7 +6,7 @@
  3) Streamlit run 10601.py
  4) (Optional) Check out the python file for info on the algos from scratch!
  
-                              OR
+                                           OR
                               
  1) Install Streamlit 
  2) Streamlit run https://github.com/aksj98/10601/blob/master/10601.py
