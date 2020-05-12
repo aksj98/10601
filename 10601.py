@@ -3,15 +3,16 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-st.title("Interactive blog of my journey at Carnegie Mellon University")
-opag=st.sidebar.selectbox("Course/Time",["Introduction","10601"])
+
+opag=st.sidebar.selectbox("Topic",["Introduction","10601","Entrepreneurship","Schedule","Goals"])
 if opag=="Introduction":
-    st.title("About")
-    st.write("I got into Carnegie Mellon University's MS in Artificial Intelligence and Innovation on the 8th of Feburary 2020. As a 21 year old going into a top AI school, i was interested in changing the world using AI and this degree would allow me to do that. In subsequent months, I decided to make an interative journal/blog about my life at the university. This blog will contain both knowledge and humor and i hope you like it!")
+    st.markdown("# Interactive blog of my journey at Carnegie Mellon University")
+    st.markdown("## About")
+    st.write("I got accepted in Carnegie Mellon University's MS in Artificial Intelligence and Innovation hosted at the LTI, School of Computer Science on the 8th of Feburary 2020. As a 21 year old going into a top AI school, i was interested in changing the world using AI and this degree would allow me to do that. In subsequent months, I decided to make an interative journal/blog about my life at the university. This blog will contain both knowledge and humor and i hope you like it!")
     st.markdown("*Interests at the time of entry:*")
     st.markdown("Entrepreneurship in AI, AI Policy, Reinforcement Learning, Quantum Machine Learning, AI and Ethics")
 if opag=="10601":
-    st.title("10-601, Introduction to ML, CMU, Audit by Akshaj, May 2020")
+    st.markdown("## Audit of 10-601, Introduction to ML")
     def bayesoptimalclassifier(x):
         return max_probability(x,y)
     def spinaprox():
@@ -69,9 +70,9 @@ if opag=="10601":
             datayes=data[data[:,f]=="yes"]'''
     opt=st.sidebar.selectbox("Select a Topic",["Decision Trees"])
     if opt=="Decision Trees":
-        st.title("Decision Trees - Lecture 1")
+        st.markdown(" ## Decision Trees - Lecture 1")
         data=np.array([["yes","no","no"],["yes","no","no"],["yes","no","yes"]])
-        st.write("I read throught the prerequisite available at http://ciml.info/dl/v0_99/ciml-v0_99-ch01.pdf")
+        st.markdown("Reading-1 available at [Chapter 1,Course in ML](http://ciml.info/dl/v0_99/ciml-v0_99-ch01.pdf)")
         data
         st.write("Here 0th index is the feature that we want to predict")
         st.write("I coded the algorithm to detect the feature while will give us the maximum info gain(using the algorithm one in the given resource)")
@@ -82,9 +83,32 @@ if opag=="10601":
         numpoints=st.slider('Number of points to approx with')
         aprox(n=numpoints,a=aabcd,b=bacd)
         st.pyplot()
-        st.title("Decision Trees - Lecture 2")
-        st.write("reading : http://ciml.info/dl/v0_99/ciml-v0_99-ch02.pdf")
+        st.markdown("## Decision Trees - Lecture 2")
+        st.markdown("Reading-2 available at [Chapter 2,Course in ML](http://ciml.info/dl/v0_99/ciml-v0_99-ch02.pdf)")
         #bayes optimal classifier
         #inductive bias: how much does the model prefer a solution
         #sources of error: 1) Noise in training data 2) Noise in Feature or label 3) limited features 4) Misaligned bias
-    
+if opag=="Entrepreneurship":
+    st.markdown("# My Entrepreneurial Journey at CMU")
+    setime=st.sidebar.selectbox("Time",["May '20"])
+    if setime=="May '20":
+        st.markdown('''## May 2020
+**Current Goals in Entrepreneurship**
+
+1. Open a Startup based on edge analytics
+
+1. MiT Solve
+
+2. Swartz Fellowship
+
+3. CSL Fellowship
+
+4. CSL Course in Spring '21
+
+## Conferences/Events Attended:
+
+1. Talk by [Ed Essey](https://edessey.com/) on Incubation in large corporations''')
+if opag=="Schedule":
+    pass
+if opag=="Goals":
+    pass
