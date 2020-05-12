@@ -3,8 +3,9 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-data=np.array([["yes","no","no"],["yes","no","no"],["yes","no","yes"]])
 st.title("10-601, Introduction to ML, CMU, Audit by Akshaj, May 2020")
+def bayesoptimalclassifier(x):
+    return max_probability(x,y)
 def spinaprox():
     a=np.arange(0,2*3.14,2*3.14/100)
     b=np.sin(a)
@@ -60,6 +61,8 @@ def algo1(data,nf):
         datayes=data[data[:,f]=="yes"]'''
 opt=st.sidebar.selectbox("Select a Topic",["Decision Trees"])
 if opt=="Decision Trees":
+    st.title("Decision Trees - Lecture 1")
+    data=np.array([["yes","no","no"],["yes","no","no"],["yes","no","yes"]])
     st.write("I read throught the prerequisite available at http://ciml.info/dl/v0_99/ciml-v0_99-ch01.pdf")
     data
     st.write("Here 0th index is the feature that we want to predict")
@@ -71,5 +74,9 @@ if opt=="Decision Trees":
     numpoints=st.slider('Number of points to approx with')
     aprox(n=numpoints,a=aabcd,b=bacd)
     st.pyplot()
-    #memorizer algorithm
+    st.title("Decision Trees - Lecture 2")
+    st.write("reading : http://ciml.info/dl/v0_99/ciml-v0_99-ch02.pdf")
+    #bayes optimal classifier
+    #inductive bias: how much does the model prefer a solution
+    #sources of error: 1) Noise in training data 2) Noise in Feature or label 3) limited features 4) Misaligned bias
     
