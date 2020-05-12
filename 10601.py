@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
-opag=st.sidebar.selectbox("Topic",["Introduction","10601","Entrepreneurship","Schedule","Goals"])
+opag=st.sidebar.selectbox("Topic",["Introduction","10601","Entrepreneurship","Schedule","Goals","Equality"])
 if opag=="Introduction":
     st.markdown("# Interactive blog of my journey at Carnegie Mellon University")
     st.markdown("## About")
@@ -111,4 +111,6 @@ if opag=="Entrepreneurship":
 if opag=="Schedule":
     pass
 if opag=="Goals":
+    pass
+if opag=="Equality":
     pass
