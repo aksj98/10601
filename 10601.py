@@ -13,7 +13,7 @@ if opag=="Introduction":
     st.markdown("Entrepreneurship in AI, AI Policy, Reinforcement Learning, Quantum Machine Learning, AI and Ethics")
 if opag=="Audits":
     sesesese=st.sidebar.selectbox("Select Course",["CMU - 10601","CMU - 10725"])
-    if sesesese=="10601":
+    if sesesese=="CMU - 10601":
         st.markdown("## Audit of 10-601, Introduction to ML")
         def bayesoptimalclassifier(x):
             return max_probability(x,y)
@@ -70,7 +70,7 @@ if opag=="Audits":
                 return f
                 '''datano=data[data[:,f]=="no"]
                 datayes=data[data[:,f]=="yes"]'''
-        opt=st.sidebar.selectbox("Select a Topic",["Decision Trees"])
+        opt=st.sidebar.selectbox("Select a Topic",["Decision Trees","K-Nearest Neighbour"])
         if opt=="Decision Trees":
             st.markdown(" ## Decision Trees - Lecture 1")
             data=np.array([["yes","no","no"],["yes","no","no"],["yes","no","yes"]])
@@ -88,8 +88,13 @@ if opag=="Audits":
             st.markdown("## Decision Trees - Lecture 2")
             st.markdown("Reading-2 available at [Chapter 2,Course in ML](http://ciml.info/dl/v0_99/ciml-v0_99-ch02.pdf)")
             def train(data):
-                root=new Node(data=data)
+                #root=new Node(data=data)
                 return train_tree(root)
+        if opt=="K-Nearest Neighbour":
+            st.markdown('''## K-Nearest Neighbour - Lecture 3
+Reading - 1 available at [Chapter 3, Geometry and Nearest Neighbors](http://ciml.info/dl/v0_99/ciml-v0_99-ch03.pdf)''')
+
+            
             
             #bayes optimal classifier
             #inductive bias: how much does the model prefer a solution
