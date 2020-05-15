@@ -91,11 +91,54 @@ if opag=="Audits":
                 #root=new Node(data=data)
                 return train_tree(root)
         if opt=="K-Nearest Neighbour":
+            def knnpre(d,k,x):
+                ds=(np.array(d))[:,1:]
+                di=np.sum(((ds-x)**2),axis=1)
+                di=di.reshape((20,1))
+                rat=np.array(d)[:,0]
+                rat=rat.reshape((20,1))
+                final=np.concatenate((di,rat),axis=1)
+                final=final[final[:,0].argsort()]
+                yeze=0
+                for i in range(0,k):
+                    if (final[i,1]>-1):
+                        yeze=yeze+1
+                    else:
+                        yeze=yeze-1
+                if yeze>-1:
+                    return 1
+                else:
+                    return 0
             st.markdown('''## K-Nearest Neighbour - Lecture 3
 Reading - 1 available at [Chapter 3, Geometry and Nearest Neighbors](http://ciml.info/dl/v0_99/ciml-v0_99-ch03.pdf)''')
-
-            
-            
+            tabl1=pd.DataFrame({"Rating":[2,2,2,2,2,1,1,1,0,0,0,0,-1,-1,-1,-1,-2,-2,-2,-2],"Ez":[1,1,0,0,0,1,1,0,0,1,0,1,1,0,0,1,0,0,1,1],"AI":[1,1,1,0,1,1,1,1,0,0,1,1,1,0,0,0,0,1,0,0],"Sys":[0,0,0,0,1,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1],"Th":[1,1,0,1,0,0,1,1,0,1,1,1,0,1,0,0,1,0,0,0],"Morn":[0,0,0,0,1,0,0,0,1,1,0,1,1,0,1,1,0,1,0,1]},columns=["Rating","Ez","AI","Sys","Th","Morn"])
+            '''Course Rating Dataset'''
+            tabl1
+            X=tabl1[tabl1['Rating']<0]
+            Xp=tabl1[tabl1['Rating']>=0]
+            xaxis=st.selectbox("X-Axis",["AI","Ez","Sys"])
+            yaxis=st.selectbox("Y-Axis",["AI","Ez","Sys"])
+            plt.scatter(X[xaxis],X[yaxis],c='r')
+            plt.scatter(Xp[xaxis],Xp[yaxis],marker='+',c='b')
+            plt.xlabel(xaxis)
+            plt.ylabel(yaxis)
+            plt.title("Plotting the dataset")
+            st.pyplot()
+            st.markdown("## K-NN on the Dataset")
+            slidee=st.slider("Select the element to predict",1,20)
+            st.markdown(" Element is")
+            cur_element=tabl1.loc[slidee-1,:]
+            st.write(cur_element)
+            slidee2=st.slider("Select the K",1,20)
+            reseult=knnpre(tabl1,slidee2,np.array(tabl1)[slidee-1,1:])
+            if (reseult)==0:
+                st.markdown("### Negative")
+            else:
+                st.markdown("### Positive")
+            if (( (reseult==1) and (cur_element['Rating']>-1) ) or ((reseult==0) and (cur_element['Rating']<0))):
+                st.markdown("#### Result is correct")
+            else:
+                st.markdown("#### Result is incorrect")
             #bayes optimal classifier
             #inductive bias: how much does the model prefer a solution
             #sources of error: 1) Noise in training data 2) Noise in Feature or label 3) limited features 4) Misaligned bias
