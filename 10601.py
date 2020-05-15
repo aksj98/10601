@@ -132,13 +132,15 @@ Reading - 1 available at [Chapter 3, Geometry and Nearest Neighbors](http://ciml
             slidee2=st.slider("Select the K",1,20)
             reseult=knnpre(tabl1,slidee2,np.array(tabl1)[slidee-1,1:])
             if (reseult)==0:
-                st.markdown("### Negative")
+                st.markdown('''Prediction:
+*Rating is Negative*''')
             else:
-                st.markdown("### Positive")
+                st.markdown('''Prediction:
+*Rating is Positive*''')
             if (( (reseult==1) and (cur_element['Rating']>-1) ) or ((reseult==0) and (cur_element['Rating']<0))):
-                st.markdown("#### Result is correct")
+                st.markdown("#### Prediction is correct")
             else:
-                st.markdown("#### Result is incorrect")
+                st.markdown("#### Prediction is incorrect")
             #bayes optimal classifier
             #inductive bias: how much does the model prefer a solution
             #sources of error: 1) Noise in training data 2) Noise in Feature or label 3) limited features 4) Misaligned bias
