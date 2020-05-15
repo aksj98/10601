@@ -12,3 +12,9 @@ I got accepted into MS in Artificial Intelligence & Innovation at Carnegie Mello
                               
  1) Install Streamlit 
  2) Streamlit run https://github.com/aksj98/10601/blob/master/10601.py
+ 
+# Latest Changes
+ 1) Added K-NN algorithm & Added Dataset from ciml appendix
+
+# Policies
+ 1) Assignments for audited/taken courses will not be solved and uploaded in this application, the reason for this in plain words is to avoid plagarism 
