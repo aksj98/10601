@@ -18,4 +18,4 @@ I got accepted into MS in Artificial Intelligence & Innovation at Carnegie Mello
 
 # Policies
  1) Assignments for audited/taken courses will not be solved and uploaded in this application, the reason for this in plain words is to avoid plagarism 
- 2) No material from the classes will be shared only, only work done on the reading material and related materials to what was taught in classes is shared in this blog.
+ 2) No material from the classes will be shared here, only work done on the reading material and related materials to what was taught in classes is shared in this blog.
