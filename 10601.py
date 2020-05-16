@@ -3,7 +3,6 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-
 opag=st.sidebar.selectbox("Topic",["Introduction","Audits","Entrepreneurship","Schedule","Goals","Equality"])
 if opag=="Introduction":
     st.markdown("# Interactive blog of my journey at Carnegie Mellon University")
