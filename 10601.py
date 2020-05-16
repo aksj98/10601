@@ -14,7 +14,8 @@ if opag=="Introduction":
 if opag=="Audits":
     sesesese=st.sidebar.selectbox("Select Course",["CMU - 10601","CMU - 10725"])
     if sesesese=="CMU - 10601":
-        st.markdown("## Audit of 10-601, Introduction to ML")
+        st.markdown('''## Audit of 10-601, Introduction to ML
+[Official Course Website](http://www.cs.cmu.edu/~mgormley/courses/10601/index.html)''')
         def bayesoptimalclassifier(x):
             return max_probability(x,y)
         def spinaprox():
@@ -70,11 +71,11 @@ if opag=="Audits":
                 return f
                 '''datano=data[data[:,f]=="no"]
                 datayes=data[data[:,f]=="yes"]'''
-        opt=st.sidebar.selectbox("Select a Topic",["Decision Trees","K-Nearest Neighbour"])
+        opt=st.sidebar.selectbox("Select a Topic",["Decision Trees","K-Nearest Neighbour","Perceptron"])
         if opt=="Decision Trees":
             st.markdown(" ## Decision Trees - Lecture 1")
             data=np.array([["yes","no","no"],["yes","no","no"],["yes","no","yes"]])
-            st.markdown("Reading-1 available at [Chapter 1,Course in ML](http://ciml.info/dl/v0_99/ciml-v0_99-ch01.pdf)")
+            st.markdown("Reading-1 available at [Chapter 1,Course in ML](http://ciml.info/dl/v0_99/ciml-v0_99-ch01.pdf) by [Dr. Hal](http://users.umiacs.umd.edu/~hal/index.html)")
             data
             st.write("Here 0th index is the feature that we want to predict")
             st.write("I coded the algorithm to detect the feature while will give us the maximum info gain(using the algorithm one in the given resource)")
@@ -86,7 +87,7 @@ if opag=="Audits":
             aprox(n=numpoints,a=aabcd,b=bacd)
             st.pyplot()
             st.markdown("## Decision Trees - Lecture 2")
-            st.markdown("Reading-2 available at [Chapter 2,Course in ML](http://ciml.info/dl/v0_99/ciml-v0_99-ch02.pdf)")
+            st.markdown("Reading-2 available at [Chapter 2,Course in ML](http://ciml.info/dl/v0_99/ciml-v0_99-ch02.pdf) by [Dr. Hal](http://users.umiacs.umd.edu/~hal/index.html)")
             def train(data):
                 #root=new Node(data=data)
                 return train_tree(root)
@@ -110,7 +111,7 @@ if opag=="Audits":
                 else:
                     return 0
             st.markdown('''## K-Nearest Neighbour - Lecture 3
-Reading - 1 available at [Chapter 3, Geometry and Nearest Neighbors](http://ciml.info/dl/v0_99/ciml-v0_99-ch03.pdf)''')
+Reading - 1 available at [Chapter 3, Geometry and Nearest Neighbors](http://ciml.info/dl/v0_99/ciml-v0_99-ch03.pdf) by [Dr. Hal](http://users.umiacs.umd.edu/~hal/index.html)''')
             tabl1=pd.DataFrame({"Rating":[2,2,2,2,2,1,1,1,0,0,0,0,-1,-1,-1,-1,-2,-2,-2,-2],"Ez":[1,1,0,0,0,1,1,0,0,1,0,1,1,0,0,1,0,0,1,1],"AI":[1,1,1,0,1,1,1,1,0,0,1,1,1,0,0,0,0,1,0,0],"Sys":[0,0,0,0,1,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1],"Th":[1,1,0,1,0,0,1,1,0,1,1,1,0,1,0,0,1,0,0,0],"Morn":[0,0,0,0,1,0,0,0,1,1,0,1,1,0,1,1,0,1,0,1]},columns=["Rating","Ez","AI","Sys","Th","Morn"])
             '''Course Rating Dataset'''
             tabl1
@@ -144,6 +145,9 @@ Reading - 1 available at [Chapter 3, Geometry and Nearest Neighbors](http://ciml
             #bayes optimal classifier
             #inductive bias: how much does the model prefer a solution
             #sources of error: 1) Noise in training data 2) Noise in Feature or label 3) limited features 4) Misaligned bias
+        if opt=="Perceptron":
+            st.markdown('''## The Perceptron
+Reading available at [Perceptron](http://ciml.info/dl/v0_99/ciml-v0_99-ch04.pdf) by [Dr. Hal](http://users.umiacs.umd.edu/~hal/index.html)''')
     if sesesese=="10725":
         st.markdown("## Audit of 10-725, Convex Optimization")
 if opag=="Entrepreneurship":
@@ -151,7 +155,7 @@ if opag=="Entrepreneurship":
     setime=st.sidebar.selectbox("Time",["May '20"])
     if setime=="May '20":
         st.markdown('''## May 2020
-**Current Goals in Entrepreneurship**
+## Current Goals in Entrepreneurship
 
 1. Open a Startup based on edge analytics
 
@@ -165,7 +169,11 @@ if opag=="Entrepreneurship":
 
 ## Conferences/Events Attended:
 
-1. Talk by [Ed Essey](https://edessey.com/) on Incubation in large corporations''')
+1. Talk by [Ed Essey](https://edessey.com/) on Incubation in large corporations
+2. Office Hours: J.P Morgan Bankers for Healthcare Startups
+
+## Resources:
+1. [How to divide equity in a early stage startup](https://www.cmu.edu/swartz-center-for-entrepreneurship/assets/Connect%20Spring%202017/Frank%20Demmler%20-%20Equity%20Pie/Founders_Pie_Final.pdf)''')
 if opag=="Schedule":
     pass
 if opag=="Goals":
