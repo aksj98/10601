@@ -3,15 +3,17 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-opag=st.sidebar.selectbox("Topic",["Introduction","Audits","Entrepreneurship","Schedule","Goals","Equality"])
+opag=st.sidebar.selectbox("Topic",["Introduction","Courses/Audits","Entrepreneurship","Schedule","Goals","Equality"])
 if opag=="Introduction":
     st.markdown("# Interactive blog of my journey at Carnegie Mellon University")
     st.markdown("## About")
-    st.write("I got accepted in Carnegie Mellon University's MS in Artificial Intelligence and Innovation hosted at the LTI, School of Computer Science on the 8th of Feburary 2020. As a 21 year old going into a top AI school, i was interested in changing the world using AI and this degree would allow me to do that. In subsequent months, I decided to make an interative journal/blog about my life at the university. This blog will contain both knowledge and humor and i hope you like it!")
+    st.write('''I got accepted in Carnegie Mellon University's MS in Artificial Intelligence and Innovation hosted at the LTI, School of Computer Science on the 8th of Feburary 2020. As a 21 year old going into a top AI school, i was interested in changing the world using AI and this degree would allow me to do that. In subsequent months, I decided to make an interative journal/blog about my life at the university. This blog will contain both knowledge and humor and i hope you like it!
+
+NOTE: No code from courses/projects has been made public in this blog, since it is against CMU's Academic Integrity Policy''')
     st.markdown("*Interests at the time of entry:*")
     st.markdown("Entrepreneurship in AI, AI Policy, Reinforcement Learning, Quantum Machine Learning, AI and Ethics")
-if opag=="Audits":
-    sesesese=st.sidebar.selectbox("Select Course",["CMU - 10601","CMU - 10725"])
+if opag=="Courses/Audits":
+    sesesese=st.sidebar.selectbox("Select Course",["CMU - 10601","CMU - 10725","CMU-15513"])
     if sesesese=="CMU - 10601":
         st.markdown('''## Audit of 10-601, Introduction to ML
 [Official Course Website](http://www.cs.cmu.edu/~mgormley/courses/10601/index.html)''')
@@ -147,8 +149,17 @@ Reading - 1 available at [Chapter 3, Geometry and Nearest Neighbors](http://ciml
         if opt=="Perceptron":
             st.markdown('''## The Perceptron
 Reading available at [Perceptron](http://ciml.info/dl/v0_99/ciml-v0_99-ch04.pdf) by [Dr. Hal](http://users.umiacs.umd.edu/~hal/index.html)''')
+            def perceptrain(d,epocs,y):
+                w=np.zeros(d.shape)
+                b=np.array([0])
+                for i in range(epocs):
+                    a=w[i,:]*d[i,:]+b
+                    if y<=0:
+                        w[i,:]
     if sesesese=="10725":
         st.markdown("## Audit of 10-725, Convex Optimization")
+    if sesesese=="CMU-15513":
+        st.markdown("## Summary of attendance, 15513, Intorduction to Computer Systems,Summer 2020")
 if opag=="Entrepreneurship":
     st.markdown("# My Entrepreneurial Journey at CMU")
     setime=st.sidebar.selectbox("Time",["May '20"])
@@ -170,6 +181,7 @@ if opag=="Entrepreneurship":
 
 1. Talk by [Ed Essey](https://edessey.com/) on Incubation in large corporations
 2. Office Hours: J.P Morgan Bankers for Healthcare Startups
+3. [Pax Momentum](https://paxmv.com/) Talk by Matthew Hanson
 
 ## Resources:
 1. [How to divide equity in a early stage startup](https://www.cmu.edu/swartz-center-for-entrepreneurship/assets/Connect%20Spring%202017/Frank%20Demmler%20-%20Equity%20Pie/Founders_Pie_Final.pdf)''')
