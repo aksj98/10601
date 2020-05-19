@@ -9,7 +9,7 @@ if opag=="Introduction":
     st.markdown("## About")
     st.write('''I got accepted in Carnegie Mellon University's MS in Artificial Intelligence and Innovation hosted at the LTI, School of Computer Science on the 8th of Feburary 2020. As a 21 year old going into a top AI school, i was interested in changing the world using AI and this degree would allow me to do that. In subsequent months, I decided to make an interative journal/blog about my life at the university. This blog will contain both knowledge and humor and i hope you like it!
 
-NOTE: No code from courses/projects has been made public in this blog, since it is against CMU's Academic Integrity Policy''')
+NOTE: No code from course assignments/projects has been made public in this blog, since it is against CMU's Academic Integrity Policy''')
     st.markdown("*Interests at the time of entry:*")
     st.markdown("Entrepreneurship in AI, AI Policy, Reinforcement Learning, Quantum Machine Learning, AI and Ethics")
 if opag=="Courses/Audits":
