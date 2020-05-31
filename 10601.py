@@ -202,6 +202,6 @@ if opag=="AI Policy":
     st.markdown("# [US policy](https://www.whitehouse.gov/ai/)")
     st.markdown(''' Although the US Executive order places alot of importance to AI, and identifies key AI areas it needs to take initiatives in and is well drawn out, the implementation of such a policy seems to be the key problem
                 The US policy implementation suggests an increase of 125M$ in R&D of AI/QIC combined which seems  to be alot less than actually required to make a significant impact on such
-                areas, nonetheless, the main propogation of US AI continues to be from the private companies such as google, Facebook and microsoft. Alot of startups and privately held research groups have popped up in the field of robotics and AI as well''')
+                areas, nonetheless, the main propogation of US AI continues to be from US companies such as Google, Facebook, Microsoft, Tesla, OpenAI among many others. Alot of startups and privately held research groups have popped up in the field of robotics and AI as well, all of which seem to focus on achieving one of the US AI policy goals.''')
     
     
