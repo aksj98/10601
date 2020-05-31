@@ -1,5 +1,6 @@
 #code authored by Akshaj Jain
 import streamlit as st
+import sys
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -13,7 +14,7 @@ NOTE: No code from course assignments/projects has been made public in this blog
     st.markdown("*Interests at the time of entry:*")
     st.markdown("Entrepreneurship in AI, AI Policy, Reinforcement Learning, Quantum Machine Learning, AI and Ethics")
 if opag=="Courses/Audits":
-    sesesese=st.sidebar.selectbox("Select Course",["CMU - 10601","CMU - 10725","CMU-15513"])
+    sesesese=st.sidebar.selectbox("Select Course",["CMU - 10601","CMU - 10725","CMU - 15513"])
     if sesesese=="CMU - 10601":
         st.markdown('''## Audit of 10-601, Introduction to ML
 [Official Course Website](http://www.cs.cmu.edu/~mgormley/courses/10601/index.html)''')
@@ -156,15 +157,32 @@ Reading available at [Perceptron](http://ciml.info/dl/v0_99/ciml-v0_99-ch04.pdf)
                     a=w[i,:]*d[i,:]+b
                     if y<=0:
                         w[i,:]
-    if sesesese=="10725":
+    if sesesese=="CMU - 10725":
         st.markdown("## Audit of 10-725, Convex Optimization")
-    if sesesese=="CMU-15513":
+    if sesesese=="CMU - 15513":
         st.markdown("## Summary of attendance, 15513, Intorduction to Computer Systems,Summer 2020")
-        st.markdown("# Topic 1")
+        st.markdown("# Everything is Bits")
         st.markdown('''1. 2's complement representation of integer numbers
 2. Floating point representation(IEEE Standard)
 3. Casting from one representation to the other one.
 4. Little Endian and Big Endian''')
+        num=st.slider("Select a number to represent",0,1<<53-1)
+        numtohex='{0:014x}'.format(num)
+        st.markdown("### Hex representation of the number")
+        st.write(numtohex)
+        ad=0
+        addys=[]
+        while(ad<13):
+            addy=numtohex[0+ad:ad+2]
+            ad=ad+2
+            addys.append(addy)
+        addyss=addys[::-1]
+        addys=np.array(addys).reshape((1,-1))
+        st.markdown("### Big Endian Representation")
+        st.write(addys)
+        addyss=np.array(addyss).reshape((1,-1))
+        st.markdown("### Little Endian Representation")
+        st.write(addyss)
 if opag=="Entrepreneurship":
     st.markdown("# My Entrepreneurial Journey at CMU")
     setime=st.sidebar.selectbox("Time",["May '20"])
