@@ -3,13 +3,13 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-opag=st.sidebar.selectbox("Topic",["Introduction","Courses/Audits","Entrepreneurship","Schedule","Goals","Equality"])
+opag=st.sidebar.selectbox("Topic",["Introduction","Courses/Audits","Entrepreneurship","Schedule","Goals","Equality","AI Policy"])
 if opag=="Introduction":
     st.markdown("# Interactive blog of my journey at Carnegie Mellon University")
     st.markdown("## About")
     st.write('''I got accepted in Carnegie Mellon University's MS in Artificial Intelligence and Innovation hosted at the LTI, School of Computer Science on the 8th of Feburary 2020. As a 21 year old going into a top AI school, i was interested in changing the world using AI and this degree would allow me to do that. In subsequent months, I decided to make an interative journal/blog about my life at the university. This blog will contain both knowledge and humor and i hope you like it!
 
-NOTE: No code from course assignments/projects has been made public in this blog, since it is against CMU's Academic Integrity Policy''')
+NOTE: No code from course assignments/projects has been made public in this blog, since it is against CMU's Academic Integrity Policy, This is a blog, not a place to look for assignment answers.''')
     st.markdown("*Interests at the time of entry:*")
     st.markdown("Entrepreneurship in AI, AI Policy, Reinforcement Learning, Quantum Machine Learning, AI and Ethics")
 if opag=="Courses/Audits":
@@ -160,6 +160,11 @@ Reading available at [Perceptron](http://ciml.info/dl/v0_99/ciml-v0_99-ch04.pdf)
         st.markdown("## Audit of 10-725, Convex Optimization")
     if sesesese=="CMU-15513":
         st.markdown("## Summary of attendance, 15513, Intorduction to Computer Systems,Summer 2020")
+        st.markdown("# Topic 1")
+        st.markdown('''1. 2's complement representation of integer numbers
+2. Floating point representation(IEEE Standard)
+3. Casting from one representation to the other one.
+4. Little Endian and Big Endian''')
 if opag=="Entrepreneurship":
     st.markdown("# My Entrepreneurial Journey at CMU")
     setime=st.sidebar.selectbox("Time",["May '20"])
@@ -182,6 +187,7 @@ if opag=="Entrepreneurship":
 1. Talk by [Ed Essey](https://edessey.com/) on Incubation in large corporations
 2. Office Hours: J.P Morgan Bankers for Healthcare Startups
 3. [Pax Momentum](https://paxmv.com/) Talk by Matthew Hanson
+4. CMU Startup Night With OnDeck
 
 ## Resources:
 1. [How to divide equity in a early stage startup](https://www.cmu.edu/swartz-center-for-entrepreneurship/assets/Connect%20Spring%202017/Frank%20Demmler%20-%20Equity%20Pie/Founders_Pie_Final.pdf)''')
@@ -191,3 +197,11 @@ if opag=="Goals":
     pass
 if opag=="Equality":
     pass
+if opag=="AI Policy":
+    st.markdown("## Thoughts and analysis of AI Policy and implementations")
+    st.markdown("# [US policy](https://www.whitehouse.gov/ai/)")
+    st.markdown(''' Although the US Executive order places alot of importance to AI, and identifies key AI areas it needs to take initiatives in and is well drawn out, the implementation of such a policy seems to be the key problem
+                The US policy implementation suggests an increase of 125M$ in R&D of AI/QIC combined which seems  to be alot less than actually required to make a significant impact on such
+                areas, nonetheless, the main propogation of US AI continues to be from the private companies such as google, Facebook and microsoft. Alot of startups and privately held research groups have popped up in the field of robotics and AI as well''')
+    
+    
