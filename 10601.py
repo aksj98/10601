@@ -160,29 +160,38 @@ Reading available at [Perceptron](http://ciml.info/dl/v0_99/ciml-v0_99-ch04.pdf)
     if sesesese=="CMU - 10725":
         st.markdown("## Audit of 10-725, Convex Optimization")
     if sesesese=="CMU - 15513":
-        st.markdown("## Summary of attendance, 15513, Intorduction to Computer Systems,Summer 2020")
-        st.markdown("# Everything is Bits")
-        st.markdown('''1. 2's complement representation of integer numbers
+        opt=st.sidebar.selectbox("Select a Topic",["Everything is Bits"])
+        if opt=="Everything is Bits":
+            st.markdown("## Summary of attendance, 15513, Intorduction to Computer Systems,Summer 2020")
+            st.markdown("# Everything is Bits")
+            st.markdown('''1. 2's complement representation of integer numbers
 2. Floating point representation(IEEE Standard)
 3. Casting from one representation to the other one.
 4. Little Endian and Big Endian''')
-        num=st.slider("Select a number to represent",0,1<<53-1)
-        numtohex='{0:014x}'.format(num)
-        st.markdown("### Hex representation of the number")
-        st.write(numtohex)
-        ad=0
-        addys=[]
-        while(ad<13):
-            addy=numtohex[0+ad:ad+2]
-            ad=ad+2
-            addys.append(addy)
-        addyss=addys[::-1]
-        addys=np.array(addys).reshape((1,-1))
-        st.markdown("### Big Endian Representation")
-        st.write(addys)
-        addyss=np.array(addyss).reshape((1,-1))
-        st.markdown("### Little Endian Representation")
-        st.write(addyss)
+            num=st.slider("Select a number to represent",0,1<<53-1)
+            numtohex='{0:014x}'.format(num)
+            st.markdown("### Hex representation of the number")
+            st.write(numtohex)
+            ad=0
+            countt=0
+            ads=[]
+            addys=[]
+            while(ad<13):
+                ads.append('{0:02x}'.format(countt))
+                countt=countt+1
+                addy=numtohex[0+ad:ad+2]
+                ad=ad+2
+                addys.append(addy)
+            addyss=addys[::-1]
+            addys=np.array(addys).reshape((1,-1))
+            addys=pd.DataFrame(addys)
+            addys.columns=ads
+            st.markdown("### Big Endian Representation")
+            st.write(addys)
+            addyss=pd.DataFrame(np.array(addyss).reshape((1,-1)))
+            addyss.columns=ads
+            st.markdown("### Little Endian Representation")
+            st.write(addyss)
 if opag=="Entrepreneurship":
     st.markdown("# My Entrepreneurial Journey at CMU")
     setime=st.sidebar.selectbox("Time",["May '20"])
