@@ -194,14 +194,14 @@ Reading available at [Perceptron](http://ciml.info/dl/v0_99/ciml-v0_99-ch04.pdf)
             st.write(addyss)
 if opag=="Entrepreneurship":
     st.markdown("# My Entrepreneurial Journey at CMU")
-    setime=st.sidebar.selectbox("Time",["May '20"])
+    setime=st.sidebar.selectbox("Time",["May '20","June '20"])
     if setime=="May '20":
         st.markdown('''## May 2020
 ## Current Goals in Entrepreneurship
 
 1. Open a Startup based on edge analytics
 
-1. MiT Solve
+1. Microsoft Imagine Cup
 
 2. Swartz Fellowship
 
@@ -217,7 +217,23 @@ if opag=="Entrepreneurship":
 4. CMU Startup Night With OnDeck
 
 ## Resources:
-1. [How to divide equity in a early stage startup](https://www.cmu.edu/swartz-center-for-entrepreneurship/assets/Connect%20Spring%202017/Frank%20Demmler%20-%20Equity%20Pie/Founders_Pie_Final.pdf)''')
+1. [How to divide equity in a early stage startup](https://www.cmu.edu/swartz-center-for-entrepreneurship/assets/Connect%20Spring%202017/Frank%20Demmler%20-%20Equity%20Pie/Founders_Pie_Final.pdf)
+2. [NVIDIA Startup ecosystem](https://www.nvidia.com/en-us/deep-learning-ai/startups/)''')
+    if setime="June '20":
+        st.markdown('''## June 2020
+## Current goals
+1. Startup in Undisclosed sector
+2. Microsoft Imagine Cup(Year long goal)
+3. Swartz Fellowship
+4. CSL fellowship
+5. CSL course in Spring '21
+
+## Conferences Attended:
+1. HBS Virtual Peek Experience
+
+## Talks/Webinars Conducted:
+1. Q&A with Dr. Hima, Assistant Professor at HBS, For DSCE Students.
+2. Talk by George Salazar, NASA.''')
 if opag=="Schedule":
     pass
 if opag=="Goals":
