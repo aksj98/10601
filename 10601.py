@@ -219,7 +219,7 @@ if opag=="Entrepreneurship":
 ## Resources:
 1. [How to divide equity in a early stage startup](https://www.cmu.edu/swartz-center-for-entrepreneurship/assets/Connect%20Spring%202017/Frank%20Demmler%20-%20Equity%20Pie/Founders_Pie_Final.pdf)
 2. [NVIDIA Startup ecosystem](https://www.nvidia.com/en-us/deep-learning-ai/startups/)''')
-    if setime="June '20":
+    if setime=="June '20":
         st.markdown('''## June 2020
 ## Current goals
 1. Startup in Undisclosed sector
@@ -229,11 +229,11 @@ if opag=="Entrepreneurship":
 5. CSL course in Spring '21
 
 ## Conferences Attended:
-1. HBS Virtual Peek Experience
+1. [HBS Virtual Peek Experience](https://www.hbs.edu/mba/admissions/Pages/Virtual-Peek-Experience-2020-abc.aspx)
 
 ## Talks/Webinars Conducted:
-1. Q&A with Dr. Hima, Assistant Professor at HBS, For DSCE Students.
-2. Talk by George Salazar, NASA.''')
+1. Q&A Session with Dr. Hima, Assistant Professor at HBS, For DSCE Students.
+2. [Road to NASA by George Salazar](https://www.youtube.com/watch?v=3cqhhpc7eus)''')
 if opag=="Schedule":
     pass
 if opag=="Goals":
