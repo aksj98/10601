@@ -230,6 +230,7 @@ if opag=="Entrepreneurship":
 
 ## Conferences Attended:
 1. [HBS Virtual Peek Experience](https://www.hbs.edu/mba/admissions/Pages/Virtual-Peek-Experience-2020-abc.aspx)
+2. [Critical Considerations for Restarting a More Resilient and Robust US Economy Post COVID-19 Virtual Roundtable by CMU AI](https://www.scs.cmu.edu/calendar/fri-2020-06-12-1030/critical-considerations-restarting-more-resilient-and-robust-us-economy-post-covid-19-virtual-roundtable)
 
 ## Talks/Webinars Conducted:
 1. Q&A Session with Dr. Hima, Assistant Professor at HBS, For DSCE Students.
