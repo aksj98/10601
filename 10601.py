@@ -160,9 +160,9 @@ Reading available at [Perceptron](http://ciml.info/dl/v0_99/ciml-v0_99-ch04.pdf)
     if sesesese=="CMU - 10725":
         st.markdown("## Audit of 10-725, Convex Optimization")
     if sesesese=="CMU - 15513":
-        opt=st.sidebar.selectbox("Select a Topic",["Everything is Bits"])
+        opt=st.sidebar.selectbox("Select a Topic",["Everything is Bits","GDB,Assembly and Buffer overflow"])
+        st.markdown("## Summary of attendance, 15513, Intorduction to Computer Systems,Summer 2020")
         if opt=="Everything is Bits":
-            st.markdown("## Summary of attendance, 15513, Intorduction to Computer Systems,Summer 2020")
             st.markdown("# Everything is Bits")
             st.markdown('''1. 2's complement representation of integer numbers
 2. Floating point representation(IEEE Standard)
@@ -192,6 +192,14 @@ Reading available at [Perceptron](http://ciml.info/dl/v0_99/ciml-v0_99-ch04.pdf)
             addyss.columns=ads
             st.markdown("### Little Endian Representation")
             st.write(addyss)
+        if opt=="GDB,Assembly and Buffer overflow":
+            st.markdown("# Machine level code")
+            st.markdown('''1. How high level code is converted to low level code
+2. All Code inevitbly ends up at the low level
+3. Registers, storing in registers etc.
+4. Procedure Calls
+5. Control transfers etc.
+6. Buffer overflow and prevention using canaries''')
 if opag=="Entrepreneurship":
     st.markdown("# My Entrepreneurial Journey at CMU")
     setime=st.sidebar.selectbox("Time",["May '20","June '20"])
