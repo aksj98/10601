@@ -4,7 +4,7 @@ import sys
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-opag=st.sidebar.selectbox("Topic",["Introduction","Courses/Audits","Entrepreneurship","Schedule","Goals","Equality","AI Policy"])
+opag=st.sidebar.selectbox("Topic",["Introduction","Courses/Audits","Entrepreneurship","Schedule","Goals","Equality","AI Policy","Research"])
 if opag=="Introduction":
     st.markdown("# Interactive blog of my journey at Carnegie Mellon University")
     st.markdown("## About")
@@ -246,7 +246,9 @@ if opag=="Entrepreneurship":
 if opag=="Schedule":
     pass
 if opag=="Goals":
-    pass
+    st.markdown("# Long-Term Goals")
+    st.markdown("1. To establish a fair and just society with as few conflicts as possible")
+    
 if opag=="Equality":
     pass
 if opag=="AI Policy":
@@ -255,5 +257,6 @@ if opag=="AI Policy":
     st.markdown(''' Although the US Executive order places alot of importance to AI, and identifies key AI areas it needs to take initiatives in and is well drawn out, the implementation of such a policy seems to be the key problem
                 The US policy implementation suggests an increase of 125M$ in R&D of AI/QIC combined which seems  to be alot less than actually required to make a significant impact on such
                 areas, nonetheless, the main propogation of US AI continues to be from US companies such as Google, Facebook, Microsoft, Tesla, OpenAI among many others. Alot of startups and privately held research groups have popped up in the field of robotics and AI as well, all of which seem to focus on achieving one of the US AI policy goals.''')
-    
+if opag=="Research":
+    pass
     
