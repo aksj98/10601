@@ -263,7 +263,7 @@ if opag=="Summary of Readings":
     blahblahbluf=st.sidebar.selectbox("Select book/paper",["Machine Learning by Kevin Murphy"])
     if blahblahbluf=="Machine Learning by Kevin Murphy":
         st.markdown("## Summary of reading of [Machine Learning: A probabilistic approach by Kevin P. Murphy](https://www.amazon.com/Machine-Learning-Probabilistic-Perspective-Computation/dp/0262018020)")
-        blahbluf=st.sidebar.selectbox("Select Chaper",["Introduction","Probability"])
+        blahbluf=st.sidebar.selectbox("Select Chaper",["Introduction","Probability","Linear Regression"])
         if blahbluf=="Introduction":
             st.markdown("# Chapter 1:Introduction")
             st.markdown('''1. Types of machine learning --> Supervised, Unsupervised and Reinforcement
@@ -286,7 +286,29 @@ Frequentist probability in essence means that the probability implies that a num
 2. The probability of both events A and B happening is equivalent to the probability of event A happening, given event B has already happened multiplied by the probability of event B happening
 3. The probability of Event A happening given that event B has already happened is equivalent to the probability of both the events happening divided by the probability of event B happening.
 4. *Bayes Theorem* : The probability of X happening, given y happens is equivalent to the probability of Y happening given X happens multiplied by the probability of X happening and divided by the summation of probability of y happening given different events in the space of x happen multiplied by the probability of events in the space of x happening.
-''')    
+5. *Unconditional Independence* : Events X&Y are unconditionally independent when the probability of both the events happening is equivalent to the probability of X happening multiplied by the probability of Y happpening, that is, the events' probabilities does not change regardless of the other event happening or not.
+6. *Conditional Independence*: Events X&Y are conditionally independent when the probability of both X and Y happening, given another event Z happens is equivalent to the probability of X happening given Z happens multiplied by the probability of Y happening given Z happens
+### Continous Random Variables
+1. *Cumulative distribution function*: It is a function which contains the probability of all quantities below the given threshold, lets say *x*.
+2. Probability of events/values a->b, given $b>a$ is equivalent to $f(b)-f(a)$
+3. *Probability Density Function*: $f(x)=\\frac{d}{dx}F(x)$, which essentially gives the probability at a particular point, $x$
+4. $P(a<X\\leq b)=\\int_a^b f(x)dx$
+5. Quantiles for a continous distribution
+6. Expected Values, Variance of a distribution
+### Common Discrete distributions
+#### *Binomial*
+1. Gives the probability of K successes in N number of trials given the probability of success $\\Theta$
+1. $\\binom{n}{k}\\Theta^k(1-\\Theta)^{n-k}$ , where, $\\Theta$ is the probability of one success, $n$ is the number of trials and $k$ is the number of successes and $\\binom{n}{k}=\\frac{n!}{(n-k)!k!}$
+2. Mean=$\\Theta$
+3. Variance = $n\\Theta(1-\\Theta)$
+#### *Bernoulli*
+1. A Binomial Distrubtion with the event occuring only *once* is known as a Bernoulli Distribution.
+2. $\\Theta^x(1-\\Theta)^{1-x}$
+3. 
+''')
+        if blahbluf=="Linear Regression":
+            st.markdown("# Chapter 7: Linear Regression")
+            st.markdown('''''')
             
             
         
