@@ -310,6 +310,45 @@ Frequentist probability in essence means that the probability implies that a num
 #### *Multinoulli*
 1. Outcomes for events with more than 2 possible outcomes but when the event happens only once
 2. $Mu(x|1,\\Theta)=\\prod_{j=1}^{k}\\theta_{j}^{x_j}$
+#### *Poisson Distribution*
+1. $Po(x|\\lambda)=e^{-\\lambda}\\frac{\\lambda^x}{x!}$
+2. Applications: Radiactive decay
+#### *Empirical Distribution*
+1. $p_{emp}(A)=\\frac{1}{N}\\sum_{i=1}^{N}\\delta_{x_i}(A)$ where, $\\delta = \\begin{cases}
+   0 &\\text{if } x \\in A  \\\\
+   1 &\\text{if } x \\notin A
+\\end{cases}$
+### Common Continuous distributions
+#### Gaussian Distribution
+1. Also known as the normal distribution.
+2. $p(X=x)=\\frac{1}{\\sqrt{2\\pi\\sigma^2}}e^{-\\frac{1}{2\\sigma^2}(x-\\mu)^2}$
+3. $\\mu=E [X]$ is the mean and mode.
+4. $\\sigma^2=var[X]$
+5. $\\sqrt{2\\pi\\sigma^2}$ is the normalization constant to ensure that the density integrates to 1.
+6. Precision$(\\lambda)=\\frac{1}{\\sigma^2}$ , a high precision signifies a narrow distribution.
+#### Degenerate pdf
+1. In a Gaussian, when $\\sigma^2 = 0$, then it is an infinitely tall and thin spike centered at $\\mu$
+2. Thus, the probability distribution will be infinity at the mean and 0 everywhere else in such a distribution
+#### Student $t$ distribution
+1. $T(x|\\mu,\\sigma^2,v) ∝ [1+\\frac{1}{v}(\\frac{x-\\mu}{\\sigma})^2]^{-\\frac{v+1}{2}}$, where $\\mu$ is the mean, $\\sigma^2$ is the scale parameter and the v represents the degrees of freedom
+2. mean,mode = $\\mu$, $var = \\frac{v\\sigma^2}{v-2}$
+3. Has a heavier tail, allowing for outliers.
+#### Laplace distribution
+1. ${Lap}(x|\\mu,b)=\\frac{1}{2b}e^{-\\frac{|x-\\mu|}{b}}$
+2. mean,mode=$\\mu$, var=$2b^2$
+#### Gamma Distribution
+1. ${Ga}(T|shape=a,rate=b)= \\frac{b^a}{\\Gamma(a)}T^{a-1}e^{-Tb}$, $x>0, a(shape)>0,b(rate)>0$
+2. $\\Gamma(x)=\\int_0^\\infty u^{x-1}e^{-u} du$
+3. $mean=\\frac{a}{b}, mode=\\frac{a-1}{b}, var=\\frac{a}{b}^2$
+#### Beta Distribution
+1. ${Beta}(x|a,b)=\\frac{1}{B(a,b)}x^{a-1}(1-x)^{b-1} , B(a,b)=\\frac{\\Gamma(a)\\Gamma(b)}{\\Gamma(a+b)}
+, a,b>0$
+2. $mean=\\frac{a}{a+b}, mode=\\frac{a-1}{a+b-2}, var=\\frac{ab}{(a+b)^2(a+b+1)}$
+#### Pareto Distribution
+1. The Pareto Distribution is used to model heavy tail models.
+2. ${Pareto}(x|k,m)=km^kx^{-(k+1)}I(x\\ge m)$
+3. $mean=\\frac{km}{k-1} if k\\gt 1, mode=m, var=\\frac{m^2k}{(k-1)^2(k-2) }if k\\gt 2$
+
 ''')
         if blahbluf=="Linear Regression":
             st.markdown("# Chapter 7: Linear Regression")
