@@ -4,7 +4,7 @@ import sys
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-opag=st.sidebar.selectbox("Topic",["Introduction","Courses/Audits","Entrepreneurship","Schedule","Goals","Equality","AI Policy","Research"])
+opag=st.sidebar.selectbox("Topic",["Introduction","Courses/Audits","Entrepreneurship","Schedule","Goals","Equality","AI Policy","Research","Summary of Readings"])
 if opag=="Introduction":
     st.markdown("# Interactive blog of my journey at Carnegie Mellon University")
     st.markdown("## About")
@@ -259,4 +259,22 @@ if opag=="AI Policy":
                 areas, nonetheless, the main propogation of US AI continues to be from US companies such as Google, Facebook, Microsoft, Tesla, OpenAI among many others. Alot of startups and privately held research groups have popped up in the field of robotics and AI as well, all of which seem to focus on achieving one of the US AI policy goals.''')
 if opag=="Research":
     pass
-    
+if opag=="Summary of Readings":
+    blahblahbluf=st.sidebar.selectbox("Select book/paper",["Machine Learning by Kevin Murphy"])
+    if blahblahbluf=="Machine Learning by Kevin Murphy":
+        st.markdown("## Summary of reading of [Machine Learning: A probabilistic approach by Kevin P. Murphy](https://www.amazon.com/Machine-Learning-Probabilistic-Perspective-Computation/dp/0262018020)")
+        blahbluf=st.sidebar.selectbox("Select Chaper",["Introduction"])
+        if blahbluf=="Introduction":
+            st.markdown('''1. Types of machine learning --> Supervised, Unsupervised and Reinforcement
+2. Classification and Regression
+3. Clustering
+4. Brief of PCA
+5. Graph Structures
+6. Parametric and Non-Parametric models
+7. K-NN algorithm and a probabilistic approach to KNN
+8. Curse of dimensionality
+9. Liner,Logistic Regression.
+10. Overfitting and model selection, K-Fold Cross validation
+11. No free Lunch theorem''')
+            
+        
