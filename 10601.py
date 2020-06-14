@@ -263,7 +263,7 @@ if opag=="Summary of Readings":
     blahblahbluf=st.sidebar.selectbox("Select book/paper",["Machine Learning by Kevin Murphy"])
     if blahblahbluf=="Machine Learning by Kevin Murphy":
         st.markdown("## Summary of reading of [Machine Learning: A probabilistic approach by Kevin P. Murphy](https://www.amazon.com/Machine-Learning-Probabilistic-Perspective-Computation/dp/0262018020)")
-        blahbluf=st.sidebar.selectbox("Select Chaper",["Introduction"])
+        blahbluf=st.sidebar.selectbox("Select Chaper",["Introduction","Probability"])
         if blahbluf=="Introduction":
             st.markdown("# Chapter 1:Introduction")
             st.markdown('''1. Types of machine learning --> Supervised, Unsupervised and Reinforcement
@@ -277,6 +277,16 @@ if opag=="Summary of Readings":
 9. Liner,Logistic Regression.
 10. Overfitting and model selection, K-Fold Cross validation
 11. No free Lunch theorem''')
+        if blahbluf=="Probability":
+            st.markdown("# Chapter 2:Probability")
+            st.markdown('''### Frequentist vs Bayesian
+Frequentist probability in essence means that the probability implies that a number of events happen, how many of those events will result in a partiucular event. Whereas, in the Bayesian Interpretation, the probability is a way of interpreting the uncertainity surrounding an event.
+### Probability Theory
+1. The probability of the union of two events is the sum of the probability of the two events from which, the probability of both the events happening is subtracted
+2. The probability of both events A and B happening is equivalent to the probability of event A happening, given event B has already happened multiplied by the probability of event B happening
+3. The probability of Event A happening given that event B has already happened is equivalent to the probability of both the events happening divided by the probability of event B happening.
+4. *Bayes Theorem* : The probability of X happening, given y happens is equivalent to the probability of Y happening given X happens multiplied by the probability of X happening and divided by the summation of probability of y happening given different events in the space of x happen multiplied by the probability of events in the space of x happening.
+''')    
             
             
         
