@@ -265,6 +265,7 @@ if opag=="Summary of Readings":
         st.markdown("## Summary of reading of [Machine Learning: A probabilistic approach by Kevin P. Murphy](https://www.amazon.com/Machine-Learning-Probabilistic-Perspective-Computation/dp/0262018020)")
         blahbluf=st.sidebar.selectbox("Select Chaper",["Introduction"])
         if blahbluf=="Introduction":
+            st.markdown("# Chapter 1:Introduction")
             st.markdown('''1. Types of machine learning --> Supervised, Unsupervised and Reinforcement
 2. Classification and Regression
 3. Clustering
@@ -276,5 +277,6 @@ if opag=="Summary of Readings":
 9. Liner,Logistic Regression.
 10. Overfitting and model selection, K-Fold Cross validation
 11. No free Lunch theorem''')
+            
             
         
