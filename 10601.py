@@ -304,7 +304,12 @@ Frequentist probability in essence means that the probability implies that a num
 #### *Bernoulli*
 1. A Binomial Distrubtion with the event occuring only *once* is known as a Bernoulli Distribution.
 2. $\\Theta^x(1-\\Theta)^{1-x}$
-3. 
+#### *Multinomial*
+1. Outcomes for events with more than 2 possible outcomes
+2. $Mu(x|n,\\Theta)=\\binom{n}{x_{1}...x_{k}}\\prod_{j=1}^{{K}}\\theta_{j}^{x_j}$, where $\\binom{n}{x_{1}...x_{k}}=\\frac{n!}{x_1!x_2!x_3!.....x_K!}$ , $x_j$ is the number of times the event $j$ occcurs
+#### *Multinoulli*
+1. Outcomes for events with more than 2 possible outcomes but when the event happens only once
+2. $Mu(x|1,\\Theta)=\\prod_{j=1}^{k}\\theta_{j}^{x_j}$
 ''')
         if blahbluf=="Linear Regression":
             st.markdown("# Chapter 7: Linear Regression")
