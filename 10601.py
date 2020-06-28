@@ -236,13 +236,14 @@ if opag=="Entrepreneurship":
 4. CSL fellowship
 5. CSL course in Spring '21
 
-## Conferences Attended:
+## Conferences/Talks Attended:
 1. [HBS Virtual Peek Experience](https://www.hbs.edu/mba/admissions/Pages/Virtual-Peek-Experience-2020-abc.aspx)
 2. [Critical Considerations for Restarting a More Resilient and Robust US Economy Post COVID-19 Virtual Roundtable by CMU AI](https://www.scs.cmu.edu/calendar/fri-2020-06-12-1030/critical-considerations-restarting-more-resilient-and-robust-us-economy-post-covid-19-virtual-roundtable)
 3. [Using AI to Tackle Global Environment Challenges by Microsoft AI for Earth & World Resources Institute](https://www.wri.org/events/2020/06/webinar-ai-global-environmental-challenges)
+4. Industry Spotlight Series: Private Equity By Harvard Business School
 
 ## Talks/Webinars Conducted:
-1. Q&A Session with Dr. Hima, Assistant Professor at HBS, For DSCE Students.
+1. [Q&A Session with Dr. Hima, Assistant Professor at HBS, For DSCE Students.](https://www.youtube.com/watch?v=ia71bTEBkoI)
 2. [Road to NASA by George Salazar](https://www.youtube.com/watch?v=3cqhhpc7eus)
 
 ## Resources:
