@@ -4,7 +4,13 @@ import sys
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-opag=st.sidebar.selectbox("Topic",["Introduction","Courses/Audits","Entrepreneurship","Schedule","Goals","Equality","AI Policy","Research","Summary of Readings"])
+opag=st.sidebar.selectbox("Topic",["Introduction","Courses/Audits","Entrepreneurship","Schedule","Goals","Equality","AI Policy","Research","Summary of Readings","Extras"])
+if opag=="Extras":
+    st.markdown("# Extras")
+    zeha=st.sidebar.selectbox("Select Topic",["List of Abbreviations"])
+    if zeha=="List of Abbreviations":
+        st.markdown("## List of Abbreviations")
+        st.markdown('''1. OK = Oll Correct''')
 if opag=="Introduction":
     st.markdown("# Interactive blog of my journey at Carnegie Mellon University")
     st.markdown("## About")
