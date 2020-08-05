@@ -4,10 +4,10 @@ import sys
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-opag=st.sidebar.selectbox("Topic",["Introduction","Courses/Audits","Entrepreneurship","Schedule","Goals","Equality","AI Policy","Research","Summary of Readings","Extras"])
+opag=st.sidebar.selectbox("Topic",["Introduction","Courses/Audits","Entrepreneurship","Schedule","Goals","Equality","AI Policy","Research","Summary of Readings","Extras","Acknowledgements"])
 if opag=="Extras":
     st.markdown("# Extras")
-    zeha=st.sidebar.selectbox("Select Topic",["List of Abbreviations"])
+    zeha=st.sidebar.selectbox("Select Topic",["List of Abbreviations","Humanity: A history of conflicts"])
     if zeha=="List of Abbreviations":
         st.markdown("## List of Abbreviations")
         st.markdown('''1. OK = Oll Correct''')
@@ -206,9 +206,38 @@ Reading available at [Perceptron](http://ciml.info/dl/v0_99/ciml-v0_99-ch04.pdf)
 4. Procedure Calls
 5. Control transfers etc.
 6. Buffer overflow and prevention using canaries''')
+if opag=="Acknowledgements":
+    st.markdown("### A(n) (evergrowing) list of Amazing people who helped me throughout this journey")
+    st.markdown('''1. Atul & Bindu Jain, For all the financial support and letting me be raised with an open mind.
+2. Shuktika, Animesh, Archit, Aditya, Rahul,Amit,Mukul,Shashank,Mayank Jain & Rachit Gupta who constantly guided and supported me throughout my life.
+2. Ms. A. Rawlley(Air Force Bal Bharati School), My high school Comp. Sc. Teacher who encouraged me to study the field of computer science.
+3. Dr. Krishnan R and Dr. Ramesh Babu(DSCE), For helping & guiding me throughout my undergraduate education.
+4. Dr. Michael Shamos(Carnegie Mellon University), for helping instill a scientific mindset in me and signing the letter (of acceptance) which changed my life.
+5. Dr. Rahul Dave, Dr. Pavlos Protopapas & Siddharth Das of Univ.AI, For teaching me a lot of things about startups and AI.
+6. Akshaya Sreenivasan, PwC, for helping instill values of EQ in me during my time at PwC.
+7. Ashutosh Pandey, Bapu, Rishabh Lakhotia, Bhavya Harjai, Vishwa, Aman Lodha, Shreyans, Bhargav B V, Mehul Poddar, Dhairya Patel, Kaustumbh Jaiswal (Fellow students during my time at DSCE) who helped me and colloborated with me on many things at DSCE
+8. Mansi Goyal, Marta Mendez & Sreenidhi Sundaram (MSAII '22) for collaborating with me & Brainstorming on different projects in the summer of '20. 
+''')
 if opag=="Entrepreneurship":
     st.markdown("# My Entrepreneurial Journey at CMU")
-    setime=st.sidebar.selectbox("Time",["May '20","June '20"])
+    setime=st.sidebar.selectbox("Time",["May '20","June '20","July '20"])
+    if setime=="July '20":
+         st.markdown('''## July 2020
+## Current Goals in Entrepreneurship
+
+1. Open a Startup based on *Undisclosed field*
+
+2. Swartz Fellowship
+
+3. CSL Fellowship
+
+4. CSL Course in Spring '21
+
+5. Microsoft PM Role in Garage
+
+## Conferences/Talks Attended:
+
+1. MIT Entrepreneurship Talk with Edward Roberts''')
     if setime=="May '20":
         st.markdown('''## May 2020
 ## Current Goals in Entrepreneurship
