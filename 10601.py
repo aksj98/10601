@@ -10,7 +10,7 @@ if opag=="Startups":
     zezezehaha=st.sidebar.selectbox("Startups",["Hermez","Lethical.ai"])
     if zezezehaha=="Hermez":
         st.markdown("## Hermez")
-        st.mardown("Hermez is an application which lets retailers let their customers checkout using their mobile phones and avoid queues and in-person checkout")
+        st.markdown("Hermez is an application which lets retailers let their customers checkout using their mobile phones and avoid queues and in-person checkout")
 if opag=="Extras":
     st.markdown("# Extras")
     zeha=st.sidebar.selectbox("Select Topic",["List of Abbreviations","Humanity: A history of conflicts"])
