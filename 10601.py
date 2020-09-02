@@ -4,7 +4,13 @@ import sys
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-opag=st.sidebar.selectbox("Topic",["Introduction","Courses/Audits","Entrepreneurship","Schedule","Goals","Equality","AI Policy","Research","Summary of Readings","Extras","Acknowledgements"])
+opag=st.sidebar.selectbox("Topic",["Introduction","Courses/Audits","Entrepreneurship","Schedule","Goals","Equality","AI Policy","Research","Summary of Readings","Extras","Acknowledgements","Startups"])
+if opag=="Startups":
+    st.markdown("# Startups")
+    zezezehaha=st.sidebar.selectbox("Startups",["Hermez","Lethical.ai"])
+    if zezezehaha=="Hermez":
+        st.markdown("## Hermez")
+        st.mardown("Hermez is an application which lets retailers let their customers checkout using their mobile phones and avoid queues and in-person checkout")
 if opag=="Extras":
     st.markdown("# Extras")
     zeha=st.sidebar.selectbox("Select Topic",["List of Abbreviations","Humanity: A history of conflicts"])
